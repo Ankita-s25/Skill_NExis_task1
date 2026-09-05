@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.blog {
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.blog-header {
+  background: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.blog-header h1 {
+  margin: 0;
+  font-size: 42px;
+}
+
+.blog-header p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #d1d5db;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 30px 20px;
+  flex-wrap: wrap;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 30px 20px;
+  flex-wrap: wrap;
+}
+
+.controls input {
+  width: 300px;
+  padding: 12px 15px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  color: #222;
+}
+
+.controls select {
+  width: 160px;
+  height: 48px;
+  padding: 10px 14px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  color: #222;
+  cursor: pointer;
+}s
+
+.controls select option {
+  background: white;
+  color: #222;
+}
+
+.controls input {
+  width: 300px;
+}
+
+.posts {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.post-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.category {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background: #e5e7eb;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.post-card h2 {
+  margin: 15px 0 10px;
+  font-size: 22px;
+  color: #222;
+}.post-card {
+  color: #222;
+}
+
+.post-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.post-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  color: #666;
+}
+
+@media (max-width: 800px) {
+  .posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .posts {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-header h1 {
+    font-size: 32px;
+  }
+
+  .controls input {
+    width: 100%;
+  }
+}
